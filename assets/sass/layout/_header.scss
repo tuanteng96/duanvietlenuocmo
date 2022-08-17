@@ -1,0 +1,66 @@
+.header {
+    position: relative;
+    z-index: 1001;
+    .line-svg {
+        position: absolute;
+        bottom: -#{map-get($header-config, 'height-svg')};
+        left: 0;
+        overflow: hidden;
+        svg {
+            width: map-get($header-config, 'width-svg');
+            height: map-get($header-config, 'height-svg');
+            path {
+                fill: $white;
+            }
+        }
+    }
+    &-nav {
+        ul {
+            display: flex;
+            li {
+                a {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-transform: uppercase;
+                    font-size: map-get($header-config, 'nav-font-size');
+                    padding: map-get($header-config, 'nav-padding');
+                    color: map-get($header-config, 'color');
+                    transition: .4s;
+                    &.active,
+                    &:hover {
+                        color: map-get($header-config, 'color-hover');
+                        &::before {
+                            opacity: 1;
+                            -webkit-animation-name: nav-menu--pointer-bounce;
+                            animation-name: nav-menu--pointer-bounce;
+                            -webkit-animation-fill-mode: forwards;
+                            animation-fill-mode: forwards;
+                            -webkit-animation-duration: .5s;
+                            animation-duration: .5s;
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        width: 6px;
+                        height: 6px;
+                        position: absolute;
+                        top: 0;
+                        right: auto;
+                        left: auto;
+                        opacity: 0;
+                        border-radius: 50%;
+                        background: map-get($header-config, 'color-hover');
+                        -webkit-transition: .3s;
+                        -o-transition: .3s;
+                        transition: .3s;
+                        -webkit-transition-timing-function: cubic-bezier(.58, .3, .005, 1);
+                        -o-transition-timing-function: cubic-bezier(.58, .3, .005, 1);
+                        transition-timing-function: cubic-bezier(.58, .3, .005, 1);
+                    }
+                }
+            }
+        }
+    }
+}

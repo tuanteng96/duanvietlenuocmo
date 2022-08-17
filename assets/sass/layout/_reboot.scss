@@ -1,0 +1,33 @@
+html {
+    font-family: sans-serif; // 1
+    text-size-adjust: 100%; // 2
+    -ms-text-size-adjust: 100%; // 2
+    -webkit-text-size-adjust: 100%; // 2
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// General Links
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none !important;
+}
+
+// General ul ol
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Canvas
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

@@ -1,0 +1,56 @@
+@mixin keyframeAll() {
+    @keyframes nav-menu--pointer-bounce {
+        0% {
+            opacity: 0;
+            transform: scale(0) translateY(200%)
+        }
+        30% {
+            opacity: .5;
+            transform: scale(.89) translateY(-35%)
+        }
+        50% {
+            opacity: .9;
+            transform: scale(1) translateY(-35%)
+        }
+        70% {
+            opacity: .9;
+            transform: scale(1.2) translateY(35%)
+        }
+        80% {
+            opacity: 1;
+            transform: scale(.89) translateY(0)
+        }
+        90% {
+            opacity: 1;
+            transform: scale(.89) translateY(0)
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0)
+        }
+    }
+    @keyframes move-shape-2 {
+        0% {
+            transform: rotate(1deg) translate(1px, 1px);
+        }
+        50% {
+            transform: rotate(-1deg) translate(-1px, -1px);
+        }
+        100% {
+            transform: rotate(1deg) translate(1px, 1px);
+        }
+    }
+    @keyframes move-shape-3 {
+        0% {
+            transform: translate(0);
+        }
+        50% {
+            transform: translate(5px);
+        }
+        100% {
+            transform: translate(0);
+        }
+    }
+}
+
+@include keyframeAll();

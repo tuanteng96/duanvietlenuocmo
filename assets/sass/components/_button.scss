@@ -1,0 +1,19 @@
+//Button
+.btn {
+    &:active:focus,
+    &:focus {
+        box-shadow: none !important;
+    }
+    &.btn-hover-scale {
+        -webkit-transition: transform .3s ease-in-out;
+        -o-transition: transform .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.btn-orange {
+    @include button-variant($orange, darken($orange, 1%));
+}

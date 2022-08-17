@@ -1,0 +1,18 @@
+//
+// Main Styles
+//
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+// 1: Initialize
+@import 'init';
+// 2: Bootstrap framework includes
+@import "vendor/bootstrap/bootstrap";
+// 3: Component
+@import "components/utilities",
+"components/button";
+// 4: Plugins
+// 5: Layout
+@import "layout/init";
+// 6: Page
+@import "pages/init";

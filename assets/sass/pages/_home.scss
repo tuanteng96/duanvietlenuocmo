@@ -1,0 +1,67 @@
+.home-slider {
+    position: relative;
+    .elementor-motion-effects-element {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 6% 0% 3%;
+        pointer-events: none;
+        img {
+            max-width: 770px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.home-adviser {
+    position: relative;
+    z-index: 99;
+    background: #fcf9f4;
+    padding: 90px 0;
+    &__item {
+        .feature {
+            position: relative;
+            z-index: 1;
+            padding: 0 30px;
+        }
+        .content {
+            margin: -100px 0 0 -3px;
+            text-align: center;
+            padding: 117px 0 24px;
+            position: relative;
+            z-index: 0;
+            background-image: url(https://kinco.vercel.app/_next/static/media/bg-sc-employee-1.85bd436c.png);
+            background-size: cover;
+        }
+    }
+}
+
+.home-slugon {
+    padding: 110px 0 115px;
+    background-image: url(/assets/images/home/bg-slugon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    .text {
+        font-size: 32px;
+        font-family: $font-family-stylized;
+    }
+    .shape-1,
+    .shape-2 {
+        position: absolute;
+        pointer-events: none;
+    }
+    .shape-1 {
+        bottom: -58px;
+        left: 33px;
+        -webkit-animation: move-shape-2 1200ms linear infinite;
+        animation: move-shape-2 1200ms linear infinite;
+    }
+    .shape-2 {
+        bottom: -72px;
+        right: 40px;
+        -webkit-animation: move-shape-3 1200ms linear infinite;
+        animation: move-shape-3 1200ms linear infinite;
+    }
+}

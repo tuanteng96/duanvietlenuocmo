@@ -1,0 +1,32 @@
+.position-fixed {
+    position: fixed !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+//
+// Positions
+//
+$positon-key: (top, left, right, bottom) !default;
+@each $key in $positon-key {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+            @each $name,
+            $value in $heights-and-widths {
+                .#{$key}#{$infix}-#{$name} {
+                    #{$key}: #{$value} !important;
+                }
+                .#{$key}#{$infix}--#{$name} {
+                    #{$key}: -#{$value} !important;
+                }
+            }
+        }
+    }
+}
