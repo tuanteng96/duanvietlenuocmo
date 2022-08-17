@@ -29,6 +29,14 @@
             transform: scale(1) translateY(0)
         }
     }
+    @keyframes move-wave {
+        0% {
+            background-position: left 0px bottom 0;
+        }
+        100% {
+            background-position: left 350px bottom 0;
+        }
+    }
     @keyframes move-shape-2 {
         0% {
             transform: rotate(1deg) translate(1px, 1px);
@@ -49,6 +57,20 @@
         }
         100% {
             transform: translate(0);
+        }
+    }
+    @keyframes float {
+        0% {
+            -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+        }
+        50% {
+            -webkit-transform: translatey(-10px);
+            transform: translatey(-10px);
+        }
+        100% {
+            -webkit-transform: translatey(0px);
+            transform: translatey(0px);
         }
     }
 }
