@@ -51,6 +51,12 @@
         background-size: cover;
         background-position: 0px 0;
         background-repeat: no-repeat;
+        @include media-breakpoint-down(md) {
+            background-size: contain;
+            background-position: bottom;
+            padding: 30px 0 70px;
+        }
+    
         &__shape-1 {
             position: absolute;
             bottom: 10px;
@@ -69,14 +75,24 @@
     }
     &-item {
         padding-top: 30px;
+        @include media-breakpoint-down(lg) {
+            padding-top: 18px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-top: 20px;
+        }
         h3 {
             font-size: 26px;
             font-weight: 600;
+            @include media-breakpoint-down(lg) {
+                font-size: 20px;
+            }
         }
         .list-contact {
             .title {
                 font-family: $font-family-stylized;
                 font-size: 15px;
+                word-break: break-all;
             }
             .sub {
                 text-transform: uppercase;

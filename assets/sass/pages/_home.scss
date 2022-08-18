@@ -13,6 +13,13 @@
             color: $orange;
             line-height: 35px;
             text-transform: capitalize;
+            @include media-breakpoint-down(md) {
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+        @include media-breakpoint-down(xl) {
+            font-size: map-get($home-config, 'title-size-mobile');
         }
     }
 }
@@ -37,7 +44,7 @@
     position: relative;
     padding: 90px 0 50px;
     background-image: url("/assets/images/home/bg-adviser.png");
-    &__bg {
+    .owl-item {
         &:nth-child(4n+1) {
             .home-adviser__item {
                 &::before {
@@ -72,6 +79,7 @@
         z-index: 1;
         padding: 20px 15px 30px;
         border-radius: 15px;
+        overflow: hidden;
         &::before {
             content: "";
             position: absolute;
@@ -89,11 +97,18 @@
             }
         }
         .name {
-            padding: 0 16px;
+            padding: 0 14px;
             margin-top: -25px;
+            @include media-breakpoint-down(xxxl) {
+                margin-top: -25px;
+                padding: 0 12px;
+            }
             @include media-breakpoint-down(xxl) {
-                margin-top: -21px;
-                padding: 0 10px;
+                margin-top: -25px;
+                padding: 0 8px;
+            }
+            @include media-breakpoint-down(lg) {
+                margin-top: -29px;
             }
             &-shape {
                 background: url(/assets/images/home/shape-gv.png);
@@ -104,6 +119,17 @@
                 @include media-breakpoint-down(xxl) {
                     height: 72px;
                     padding-top: 30px;
+                }
+                @include media-breakpoint-down(xl) {
+                    height: 84px;
+                    padding-top: 36px;
+                }
+                @include media-breakpoint-down(lg) {
+                    height: 97px;
+                    padding-top: 45px;
+                }
+                @include media-breakpoint-down(md) {
+                    height: 101px;
                 }
             }
             &-sub {
@@ -121,6 +147,9 @@
                 font-weight: 600;
                 @include media-breakpoint-down(xxl) {
                     font-size: 15px;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: 18px;
                 }
             }
         }
@@ -142,12 +171,21 @@
     position: relative;
     z-index: 2;
     padding: 90px 0;
+    @include media-breakpoint-down(md) {
+        padding: 35px 0 90px;
+    }
     &__text {
         padding-left: 95px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 100%;
+        @include media-breakpoint-down(xxl) {
+            padding-left: 30px;
+        }
+        @include media-breakpoint-down(xl) {
+            padding-left: 0px;
+        }
         .desc {
             color: #70747f;
             font-family: $font-family-stylized;
@@ -161,10 +199,18 @@
         animation: move-shape-3 1200ms linear infinite;
         @include media-breakpoint-down(xxxl) {
             max-width: 290px;
-            bottom: -85px;
+            bottom: -100px;
             img {
                 width: 100%;
             }
+        }
+        @include media-breakpoint-down(xxl) {
+            max-width: 200px;
+        }
+        @include media-breakpoint-down(md) {
+            max-width: 150px;
+            bottom: -50px;
+            right: 30px;
         }
     }
 }
@@ -173,6 +219,12 @@
     padding: 200px 0;
     position: relative;
     background-color: $primary;
+    @include media-breakpoint-down(lg) {
+        padding: 130px 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 90px 0;
+    }
     &::before {
         background-image: url("/assets/images/home/home-banner-wave2.png");
         background-repeat: no-repeat;
@@ -228,6 +280,21 @@
         letter-spacing: 1px;
         font-family: $font-family-lats;
         line-height: 55px;
+        @include media-breakpoint-down(xxxl) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @include media-breakpoint-down(lg) {
+            font-size: 30px;
+            line-height: 40px;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 20px;
+            line-height: 25px;
+            &:first-child {
+                margin-bottom: 8px;
+            }
+        }
     }
     .shape-1,
     .shape-2 {
@@ -239,6 +306,14 @@
             img {
                 width: 100%;
             }
+        }
+        @include media-breakpoint-down(xl) {
+            max-width: 200px;
+            bottom: -30px !important;
+        }
+        @include media-breakpoint-down(md) {
+            max-width: 100px;
+            bottom: 0px !important;
         }
     }
     .shape-1 {
@@ -287,6 +362,12 @@
         .item {
             width: 20%;
             cursor: pointer;
+            @include media-breakpoint-down(lg) {
+                width: 25%;
+            }
+            @include media-breakpoint-down(md) {
+                width: 50%;
+            }
         }
     }
 }

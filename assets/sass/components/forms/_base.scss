@@ -1,0 +1,10 @@
+// Form control
+.form-control {
+    ~ .error {
+        display: none !important;
+    }
+    &.error {
+        border: 1px solid $danger !important;
+        @include placeholder($danger)
+    }
+}
