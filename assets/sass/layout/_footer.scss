@@ -7,6 +7,7 @@
         bottom: calc(100% - 40px);
         -webkit-animation: float 6s ease-in-out infinite;
         animation: float 6s ease-in-out infinite;
+        pointer-events: none;
     }
     .wave {
         width: 100%;
@@ -21,7 +22,7 @@
             background-repeat: repeat-x;
             -webkit-animation: move-wave 12s linear infinite;
             animation: move-wave 12s linear infinite;
-            background: url("data:image/svg+xml,%3Csvg version='1.1' id='waveHorizontal1' class='wave1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='350px' height='20px' viewBox='0 0 350 20' enable-background='new 0 0 350 20' xml:space='preserve'%3E%3Cpath fill=' %23035392' d='M0,17.1C29.9,17.1,57.8,0,87.5,0c30.2,0,58.1,17.1,87.1,17.1c29.9,0,57.8-17.1,87.7-17.1 s57.8,17.1,87.7,17.1V20H0V17.1z'/%3E%3C/svg%3E%0A");
+            background: url("/assets/images/footer/shape-s.png");
             -webkit-animation-delay: -4s;
         }
         &-1 {
@@ -45,7 +46,18 @@
         position: relative;
         z-index: 10;
         padding: 70px 0;
-        background-color: #035392;
+        background-color: $primary;
+        background-image: url("/assets/images/footer/bg-png-18.png");
+        background-size: cover;
+        background-position: 0px 0;
+        background-repeat: no-repeat;
+        &__shape-1 {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
     }
     &-logo {
         .note {
@@ -79,9 +91,9 @@
         .form-control {
             border: 0;
             border-radius: 3px;
-            padding: 12px 15px;
+            padding: 10px 15px;
             font-size: 15px;
-            font-family: $font-family-stylized;
+            font-weight: 600;
         }
     }
 }

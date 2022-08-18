@@ -1,3 +1,22 @@
+.home-current {
+    .title {
+        font-size: map-get($home-config, 'title-size');
+        text-transform: uppercase;
+        font-weight: 700;
+        color: map-get($home-config, 'title-color');
+        span {
+            color: $orange;
+        }
+        &-sub {
+            font-family: $font-family-lats;
+            font-size: 32px;
+            color: $orange;
+            line-height: 35px;
+            text-transform: capitalize;
+        }
+    }
+}
+
 .home-slider {
     position: relative;
     .elementor-motion-effects-element {
@@ -16,39 +35,211 @@
 
 .home-adviser {
     position: relative;
-    padding: 90px 0;
-    &__item {
-        .feature {
-            position: relative;
-            z-index: 1;
-            padding: 0 30px;
+    padding: 90px 0 50px;
+    background-image: url("/assets/images/home/bg-adviser.png");
+    &__bg {
+        &:nth-child(4n+1) {
+            .home-adviser__item {
+                &::before {
+                    background: $orange;
+                }
+            }
         }
-        .content {
-            margin: -100px 0 0 -3px;
-            text-align: center;
-            padding: 117px 0 24px;
-            position: relative;
-            z-index: 0;
-            background-image: url(https://kinco.vercel.app/_next/static/media/bg-sc-employee-1.85bd436c.png);
-            background-size: cover;
+        &:nth-child(3n+2) {
+            .home-adviser__item {
+                &::before {
+                    background: $success;
+                }
+            }
+        }
+        &:nth-child(3n+3) {
+            .home-adviser__item {
+                &::before {
+                    background: $danger;
+                }
+            }
+        }
+        &:nth-child(3n+4) {
+            .home-adviser__item {
+                &::before {
+                    background: $info;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        z-index: 1;
+        padding: 20px 15px 30px;
+        border-radius: 15px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 75%;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 1%, 100% 44%, 0% 100%);
+        }
+        .avt {
+            padding: 0 20px;
+            @include media-breakpoint-down(xxl) {
+                padding: 0 15px;
+            }
+        }
+        .name {
+            padding: 0 16px;
+            margin-top: -25px;
+            @include media-breakpoint-down(xxl) {
+                margin-top: -21px;
+                padding: 0 10px;
+            }
+            &-shape {
+                background: url(/assets/images/home/shape-gv.png);
+                height: 84px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 35px;
+                @include media-breakpoint-down(xxl) {
+                    height: 72px;
+                    padding-top: 30px;
+                }
+            }
+            &-sub {
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 15px;
+                font-weight: 700;
+                font-family: $font-family-stylized;
+                @include media-breakpoint-down(xxl) {
+                    font-size: 11px;
+                }
+            }
+            &-title {
+                text-transform: uppercase;
+                font-weight: 600;
+                @include media-breakpoint-down(xxl) {
+                    font-size: 15px;
+                }
+            }
+        }
+        .desc {
+            margin-top: 15px;
+            font-family: $font-family-stylized;
+            font-weight: 600;
+            line-height: 22px;
+            font-size: 15px;
+            color: #585858;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.home-companion {
+    position: relative;
+    z-index: 2;
+    padding: 90px 0;
+    &__text {
+        padding-left: 95px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        .desc {
+            color: #70747f;
+            font-family: $font-family-stylized;
+        }
+    }
+    &__shape-1 {
+        position: absolute;
+        right: 100px;
+        bottom: -30px;
+        -webkit-animation: move-shape-3 1200ms linear infinite;
+        animation: move-shape-3 1200ms linear infinite;
+        @include media-breakpoint-down(xxxl) {
+            max-width: 290px;
+            bottom: -85px;
+            img {
+                width: 100%;
+            }
         }
     }
 }
 
 .home-slugon {
-    padding: 110px 0 115px;
-    background-image: url(/assets/images/home/bg-slugon.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    padding: 200px 0;
     position: relative;
+    background-color: $primary;
+    &::before {
+        background-image: url("/assets/images/home/home-banner-wave2.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        content: "";
+        height: 160px;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        background-image: url("/assets/images/home/home-banner-wave.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        content: "";
+        height: 160px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    .effect-wrapper {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        width: 130px;
+        display: inline-block;
+        height: 100px;
+        line-height: 100px;
+        background-image: url("/assets/images/home/video-play-btn.png");
+        background-repeat: no-repeat;
+        .icon {
+            position: absolute;
+            left: 50px;
+            top: 35px;
+            z-index: 2;
+            line-height: normal;
+            i {
+                color: $orange;
+                font-size: 22px;
+            }
+        }
+        a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+    }
     .text {
-        font-size: 32px;
-        font-family: $font-family-stylized;
+        font-size: 45px;
+        letter-spacing: 1px;
+        font-family: $font-family-lats;
+        line-height: 55px;
     }
     .shape-1,
     .shape-2 {
         position: absolute;
         pointer-events: none;
+        z-index: 2;
+        @include media-breakpoint-down(xxxl) {
+            max-width: 290px;
+            img {
+                width: 100%;
+            }
+        }
     }
     .shape-1 {
         bottom: -58px;
@@ -61,5 +252,41 @@
         right: 40px;
         -webkit-animation: move-shape-3 1200ms linear infinite;
         animation: move-shape-3 1200ms linear infinite;
+    }
+}
+
+.home-partner {
+    &__item {
+        padding: 20px 30px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #d8d8d8;
+        box-shadow: 8px 8px 0 0 #ededed;
+        cursor: pointer;
+    }
+    .owl-nav {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        button {
+            width: 40px;
+            height: 40px;
+            background: #f2f2f2 !important;
+            border-radius: 2px;
+            margin: 0 3px;
+        }
+    }
+}
+
+.home-school-partner {
+    background-image: url("/assets/images/home/bg-courses.png");
+    background-size: cover;
+    .slider-item {
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+            width: 20%;
+            cursor: pointer;
+        }
     }
 }

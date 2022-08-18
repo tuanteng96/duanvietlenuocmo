@@ -13,19 +13,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- FONT Awesome CSS -->
     <link rel="stylesheet" href="assets/fonts/font-awesome-pro-v6-6/css/all.min.css">
 
+    <!-- Owl 2 CSS -->
+    <link rel="stylesheet" href="assets/libs/owl2/owl.carousel.min.css">
+
     <!-- Index CSS -->
     <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Jquery JS -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+
 </head>
 
 <body>
     <header class="header">
+        <style>
+            .cls-1 {
+                fill: #b250fe;
+            }
+            
+            .cls-1,
+            .cls-2 {
+                fill-rule: evenodd;
+            }
+            
+            .cls-2 {
+                fill: #fff;
+            }
+        </style>
+        <svg data-name="Hero Area" xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" style=""><defs></defs><g data-name="Menu Area"><g id="Menu_bar" data-name="Menu bar"><path id="Bg" class="cls-1" d="M7.853,2.283c14.9-3.89,29.969-1.4,43.467.819a7.923,7.923,0,0,1,5.735,5.422c3.111,14.141-.428,28.636-1.166,42.981a5.157,5.157,0,0,1-4.773,4.875c-13.49.568-23.463,3.285-41.787,0.9C5.948,56.807,2.348,54.2,1.9,51.7-0.683,37.877.2,23.508,2.194,8.757a8.71,8.71,0,0,1,5.66-6.473"></path><path id="Bar" class="cls-2" d="M16,17H42a2,2,0,0,1,0,4H16A2,2,0,0,1,16,17Zm0,10H42a2,2,0,0,1,0,4H16A2,2,0,0,1,16,27Zm0,10H42a2,2,0,0,1,0,4H16A2,2,0,0,1,16,37Z"></path></g></g></svg>
         <div class="container-fluid">
             <div class="d-flex justify-content-between align-items-center px-20px py-10px">
                 <div class="d-flex align-items-center">
@@ -75,54 +95,148 @@
     </header>
 
     <main>
-        <div class="home-slider">
+        <div class="home-current home-slider">
             <a href="">
                 <img src="assets/images/slider/slide-1.jpg" class="w-100 d-block" alt="">
             </a>
             <div class="elementor-motion-effects-element">
                 <div class="container">
-                    <img class="w-100 d-block" src="https://skole.vamtam.com/wp-content/uploads/2019/11/dots.svg"
-                        alt="">
+                    <img class="w-100 d-block" src="https://skole.vamtam.com/wp-content/uploads/2019/11/dots.svg" alt="">
                 </div>
             </div>
         </div>
 
-        <div class="home-adviser">
+        <div class="home-current home-companion">
+            <div class="home-companion__shape-1">
+                <img src="http://azim.commonsupport.com/Kidko/images/icons/anim-icon-6.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <img class="w-100" src="https://kinco.vercel.app/assets/images/pattern/service-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="home-companion__text">
+                            <div class="title mb-15px"><span>Đơn vị</span> tổ chức</div>
+                            <div class="desc">
+                                <p>Mỗi người sinh ra và lớn lên đều có một gia đình và đồng thời chịu ảnh hưởng của ba môi trường giáo dục chính là: Gia đình, nhà trường và xã hội. Trong đó giáo dục từ Gia đình luôn đóng vai trò quan trọng, định hướng hình
+                                    thành những giá trị cốt lõi về nhân cách, tư duy của trẻ</p>
+                                <p>
+                                    Hiểu điều đó, nên <b>WOWEDU</b> luôn muốn đồng hành cùng các bậc phụ huynh tạo thành trường học trong gia đình.
+                                </p>
+                            </div>
+                            <div class="mt-15px">
+                                <div class="d-flex align-items-center">
+                                    <div class="max-w-80px">
+                                        <img class="w-100" src="https://opendata.hochiminhcity.gov.vn/sites/default/files/styles/group_medium/public/logo_tron_small.png?itok=eBiGvvme" alt="">
+                                    </div>
+                                    <div class="flex-grow-1 pl-20px">
+                                        <div class="text-uppercase text-primary fw-800 font-size-lg line-height-lg">Sở giáo dục và đào tạo</div>
+                                        <div class="text-uppercase text-primary fw-800 font-size-lg line-height-lg">TP.Hồ Chí Minh</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mt-15px">
+                                    <div class="max-w-80px">
+                                        <img class="w-100" src="/assets/images/home/wow-logo.png" alt="">
+                                    </div>
+                                    <div class="flex-grow-1 pl-20px">
+                                        <div class="text-uppercase text-primary fw-800 font-size-lg line-height-lg">
+                                            Công ty cổ phần
+                                        </div>
+                                        <div class="text-uppercase text-primary fw-800 font-size-lg line-height-lg">
+                                            Xuất bản và giáo dục WOW
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-adviser home-current">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="77" height="30" viewBox="0 0 77 30">
-                                <g>
-                                    <image width="77" height="30"
-                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAAEPklEQVRogd2Ze4hVVRTGf+pNHRtnegxqlonUMJYGY/pXWoFEJpVBTFRDaBbOVmxC/5GUUFJMqQh6MLUjfARBUVGEYi9rqFQU0UrQ8pXvMkcLmbJSZ2TdvlOHy73de+fOmXPv/eCwD+ewz9n7O2utb611enU2NZEGA4F+QFu6m2UF7/PeTe8M17cA48qesC4iHWk3AiOB70tiBzEgHWmfAr8CB8p+911EKmn1wGXAlyWzgxiQStpyjZ+V/c4LQCI0tQKYqPN8SDPia2Wl1wBXSH0D/AYcB3YD3wL7gY64N14IwqRNAi4CjuQgAv2Be3RMkksHOAOcBs6KvEqgT+h+m+LmWuAD4PeiYSNHhEm7S+P6/5l6FTAXeBSoFgGfAJ8D3wG7RFgY9iGuliKPByYA9wMPAu3A28CzwA9xEpEPwqTdprE1zfxLgSeBZrnje8BKWcz5LO8zi9unY62uDQIagNn6AI8AbwHzgYM9S0H+CIRgGDBc51+nPKVBFjQHWK34ZZbyUQ6EZcIvQAswGpgMbJfl2XueSHHnokNA2q0ajwF7dW7C8DrwjoL3GGAG8GM3bqJT5Fv18bDi4TK5+5XFTtp4jZs1mvt8oY2YW96smBUVOmXFo4B1wC0q5cb0PCXZEZAW1JlbFOw3KnDfASwtwA3zxc/A3RKGoUqyb+qhd+eM3hKDGzThkISgWtYVR5JrH2ieRKFSllcfwzoywki7Xm0gwyLgEiW5O2Jem1UnC4Aqxb1hsa7GuRqcszifJO260K0RwL1FQFgAE4VXgMFKhAfEuJYXgT9wLpFQ7AqwSBVB2B0sYz8FnIxnrTwO1Mn6jcBpPb4C5yxMTElmFt6fS2hBAZ7WkQ5nFPMOA3tUR34F7Ix4yeeAB5TLTQU2Aa9G/M5UPARcDLyMRKA9x4kVIrguVD0YjgIfqkpojUhpTyihtue/AGyT0kcP5/oqtqKEPElak9IKc8leoUUMUGFeJRWz43KlAoOUfAbjLB3m2quAJcDf3byhDaoWngPeBcaKzKgxRyLUjPdnCdWeB7tY85mQ1KggNxG5VqT2jYA0w/PK20ys3pfF/xnBe/6Bc1bmPSXvaQkuJ7JMy4YO1ZF2bI1s8f+hU0JQqyrmDdWs3R8SnBuqBkP/ZGfG+397gJn+RhUz2qVkFkvvE3HdW+A7NwT4WB60Hu83hG+XImnop8/t6uc1AmuUlBcO5+qk0KP1Ye5MfWah7hkndqqwX6Ma2RoKj0nJ84dzZkAzgWeUXhxIdn+8/yv1WZn+sJcSTIjelOWhfuBidaBz+RfRT+6+UNaFWlONeH883YRStrQAbfpPMVXdkQlqwf+kuGSu9o1+7nRoz4NF0ES5X5WedULkvRYO/KkoB0sLwxLw6WrLj8x9WrLxugJ4Ce+zJvvlRloYRpq10i1pt6aEJeIWqyxGmdVZzLKqohXvg+ZrdgAXAIwK6LO/4gPOAAAAAElFTkSuQmCC">
-                                    </image>
-                                </g>
-                            </svg>
-                            <span>Ban cố vấn</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="77" height="30" viewBox="0 0 77 30">
-                                <g>
-                                    <image width="77" height="30"
-                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAAEMUlEQVRoge2Ze4hVVRTGf46WMyWmZvkaNSWfST7I1EINyVQ0kSxsQiyS3JFo/lGhUQSCJokk5aONhijhHyGRkKTlI3JMFKQaBx2o1HS0klSs66ucGVl3vhOnw73XwblPnQ8OZ+acfc/e+zvr8a11mtXNmsUtDe8T79659sAVvP87eqvo1mYsJR4C9ica0ERaclQBfXFuSHREE2nJ4P0x4BzwdXREE2mp8S3QDucGhUc1kZYa23V3SXhUizxb5I3AXnxPYCDQG+gAtAk9x7Lfb8AvwA/AT0BtA+cJSBuDcyV4f4kCJu1OYAowERgLtA/dqwFiIus2oDVQErp/FtgGbNZxOeks3lfhXDVQCowDPqcASesDvA5MA1rJYvYA5TpbxjsO/Bv5nRHXD3gwbjX1RJcB53HuY+B9vK9OMucO4HlgUkBaocS07sBG4DAwU8TMBjoBo4A3gS1ywShhhr+AfcAakdURmCCLexU4gnPLcK5tgt9+o/PjwYV8J605MF9k2Wa/12YHAKuA0zf4XHPhrbLYXsB6YF58HuemRsaW69wd57qS56R1AXYC7wIWgF+QSrfN1qVtFu+P4v1LwOC4xcEmnFsbD/z1938GTmn0aPKYtMEqYcz1vgQekDWkj6wovK8ARgJv6QXtwrl7NWqfzo+Sp6Q9IlHZGVgKPAn8npWZva/B+0XA+HgJBd/hXGmoBjVLzzvSBsmyLDMuAN5Q/MkuvN8uq7tLieC45h+Acy0C0koiWicX6Kp41VrZcElOV+P9QckTE8rv6Gox0L9IWu0i8EEOl3iHNJCp+dUK/rlHPXFPAT1Ca+lnhF0FLENMllvEcrBYI2qIsuXcnJHl3N3xAr2+4ghQLUtbrP/7BhXBCmA5MB34KMtLfRmYAZwEntVLzDT6K2YNxLleCg3dIuVWMvQJ2t1Wo/0DnADu19/ZwMPAbiWkx1QKZQLN9fyp8qgujZhjTWBpVnrMAT6UMn4vC4TdExeScDvwWoYIs2e/Ld1VGrpeo2ripM4mXs8oNMVUdl1WrA9QF++SeP9r+MNKkSzMCBwKVGZgEwGK1XYxsfgZ8HSGhGsrJZVTittHJR/+/K89lOzDSgqEuxy1KhPKVfyOCJUP6YS5ygYRdlAdhEwp/Zg8KK2Iits9aoV0UwegY4YIe0auMTlH2bpRSFQRTNSGrJOwVz2sdMBE4hfAc3KPJ4BjhUHT/5GItCuq/2xD9wEHgFcaWXKZRVWopjuiQvxQOjaQCyQjwoLlcIlNE3orgR/lVi0buM4idUh3q61sWugrYJj6YwWLVO3uP7RpS68L5a6fKh1vEaGVGndVJHVQ0T1CPfVOetZptak3FDJZAa73jaBWFcInykIvSvyW6bgeqqT91qmReFOgoR9WYtI7dph7mbo2NW8xz6zLXPaCLMpczz6VWYvHSLu5AFwD7u/9V73LPFIAAAAASUVORK5CYII=">
-                                    </image>
-                                </g>
-                            </svg>
+                        <div class="text-center mb-50px">
+                            <div class="title-sub">
+                                Chuyên gia
+                            </div>
+                            <div class="title">
+                                Ban cố vấn
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="home-adviser__item">
-                            <div class="feature">
-                                <img class="w-100" src="https://kinco.vercel.app/assets/images/common/sc-employee-1.jpg"
-                                    alt="">
+                    <div class="col-md-3 home-adviser__bg">
+                        <div class="home-adviser__item bg-white">
+                            <div class="avt">
+                                <img class="w-100" src="assets/images/home/gv.png" alt="">
                             </div>
-                            <div class="content">
-                                <h4>Lê thị thanh mai</h4>
-                                <div class="sub">Tiến sĩ</div>
-                                <div class="desc">Trưởng ban công tác sinh viên Đại học Quốc gia TP.HCM</div>
+                            <div class="name">
+                                <div class="text-center name-shape text-white">
+                                    <div class="name-sub">Tiến sĩ</div>
+                                    <div class="name-title">Lê thị thanh mai</div>
+                                </div>
+                            </div>
+                            <div class="desc text-center">
+                                <p>Trưởng ban công tác sinh viên</p>
+                                <p>Đại học Quốc gia TP.HCM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 home-adviser__bg">
+                        <div class="home-adviser__item bg-white">
+                            <div class="avt">
+                                <img class="w-100" src="assets/images/home/gv.png" alt="">
+                            </div>
+                            <div class="name">
+                                <div class="text-center name-shape text-white">
+                                    <div class="name-sub">Tiến sĩ</div>
+                                    <div class="name-title">Lê thị thanh mai</div>
+                                </div>
+                            </div>
+                            <div class="desc text-center">
+                                <p>Trưởng ban công tác sinh viên</p>
+                                <p>Đại học Quốc gia TP.HCM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 home-adviser__bg">
+                        <div class="home-adviser__item bg-white">
+                            <div class="avt">
+                                <img class="w-100" src="assets/images/home/gv.png" alt="">
+                            </div>
+                            <div class="name">
+                                <div class="text-center name-shape text-white">
+                                    <div class="name-sub">Tiến sĩ</div>
+                                    <div class="name-title">Lê thị thanh mai</div>
+                                </div>
+                            </div>
+                            <div class="desc text-center">
+                                <p>Trưởng ban công tác sinh viên</p>
+                                <p>Đại học Quốc gia TP.HCM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 home-adviser__bg">
+                        <div class="home-adviser__item bg-white">
+                            <div class="avt">
+                                <img class="w-100" src="assets/images/home/gv.png" alt="">
+                            </div>
+                            <div class="name">
+                                <div class="text-center name-shape text-white">
+                                    <div class="name-sub">Tiến sĩ</div>
+                                    <div class="name-title">Lê thị thanh mai</div>
+                                </div>
+                            </div>
+                            <div class="desc text-center">
+                                <p>Trưởng ban công tác sinh viên</p>
+                                <p>Đại học Quốc gia TP.HCM</p>
                             </div>
                         </div>
                     </div>
@@ -132,8 +246,16 @@
 
         <div class="home-slugon text-center text-white">
             <div class="container">
-                <div class="text">Hiểu mình - Hiểu nghề - Vững bước tương lai</div>
-                <div class="text">Học theo dự án thông qua hình thức trải nghiệm</div>
+                <div class="effect-wrapper">
+                    <div class="icon">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <a href=""></a>
+                </div>
+                <div class="my-30px">
+                    <div class="text">Hiểu mình - Hiểu nghề - Vững bước tương lai</div>
+                    <div class="text">Học và làm theo dự án thông qua hình thức trải nghiệm</div>
+                </div>
             </div>
             <div class="shape-1">
                 <img src="https://kinco.vercel.app/assets/images/pattern/fun-fact-1.png" alt="">
@@ -141,6 +263,139 @@
             <div class="shape-2">
                 <img src="https://kinco.vercel.app/assets/images/pattern/fun-fact-2.png" alt="">
             </div>
+        </div>
+
+        <div class="home-current home-partner pb-90px pt-30px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center mb-50px">
+                            <div class="title-sub">
+                                Doanh nghiệp
+                            </div>
+                            <div class="title">
+                                Đồng hành
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="owl-carousel owl-theme slide-enterprise">
+                            <div class="pb-15px pl-1px">
+                                <div class="home-partner__item">
+                                    <img src="https://suno.vn/blog/wp-content/uploads/2014/12/nike-lich-su-thiet-ke-logo.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pb-15px pl-1px">
+                                <div class="home-partner__item">
+                                    <img src="https://suno.vn/blog/wp-content/uploads/2014/12/nike-lich-su-thiet-ke-logo.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pb-15px pl-1px">
+                                <div class="home-partner__item">
+                                    <img src="https://suno.vn/blog/wp-content/uploads/2014/12/nike-lich-su-thiet-ke-logo.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pb-15px pl-1px">
+                                <div class="home-partner__item">
+                                    <img src="https://suno.vn/blog/wp-content/uploads/2014/12/nike-lich-su-thiet-ke-logo.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pb-15px pl-1px">
+                                <div class="home-partner__item">
+                                    <img src="https://suno.vn/blog/wp-content/uploads/2014/12/nike-lich-su-thiet-ke-logo.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pb-15px pl-1px">
+                                <div class="home-partner__item">
+                                    <img src="https://suno.vn/blog/wp-content/uploads/2014/12/nike-lich-su-thiet-ke-logo.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-current home-school-partner py-90px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center mb-50px">
+                            <div class="title-sub">
+                                Các trường
+                            </div>
+                            <div class="title">Đại học đồng hành</div>
+                        </div>
+                        <div>
+                            <div class="slider-school-partner">
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/treva.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/solaytic.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/lighting.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/kanba.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/aven.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/ideaa.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/circle.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/fox-hub.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/ideaa.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/circle.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/treva.png" alt="treva">
+                                    </div>
+                                </div>
+                                <div class="item p-10px">
+                                    <div class="bg-white p-30px h-100 d-flex align-items-center">
+                                        <img src="https://point.moxcreative.com/beeparty/wp-content/uploads/sites/10/2022/05/treva.png" alt="treva">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -163,10 +418,10 @@
                             </div>
                             <div class="mt-25px">
                                 <div id="fb-root"></div>
-                                <script async defer crossorigin="anonymous"
-                                    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0&appId=4019216674775693&autoLogAppEvents=1"
-                                    nonce="KsHtKpsd"></script>
-                                    <div class="fb-page" data-href="https://www.facebook.com/Duanvietlenuocmo" data-tabs="" data-width="500" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Duanvietlenuocmo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Duanvietlenuocmo">Dự án Viết Lên Ước Mơ</a></blockquote></div>
+                                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0&appId=4019216674775693&autoLogAppEvents=1" nonce="KsHtKpsd"></script>
+                                <div class="fb-page" data-href="https://www.facebook.com/Duanvietlenuocmo" data-tabs="" data-width="500" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Duanvietlenuocmo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Duanvietlenuocmo">Dự án Viết Lên Ước Mơ</a></blockquote>
+                                </div>
                             </div>
                             <div class="text-white fw-300 note mt-15px text-italic">
                                 Theo dõi Page để cập nhập những thông tin mới nhất về cuộc thi <b class="fw-600">Dự án viết lên ước mơ</b> !
@@ -213,7 +468,7 @@
                                         <textarea class="form-control" type="text" placeholder="Nội dung liên hệ" rows="3"></textarea>
                                     </div>
                                     <div class="form-group mb-15px">
-                                        <button class="btn btn-info text-uppercase fw-700"type="button">Gửi liên hệ</button>
+                                        <button class="btn btn-info text-uppercase fw-700" type="button">Gửi liên hệ</button>
                                     </div>
                                 </form>
                             </div>
@@ -221,9 +476,17 @@
                     </div>
                 </div>
             </div>
+            <div class="footer-bg__shape-1 max-w-295px">
+                <img class="w-100" src="https://templates.envytheme.com/ketan/default/assets/img/newsletter/newsletter-shape-1.png" alt="">
+            </div>
         </div>
     </footer>
 
+    <!-- Owl 2 JS -->
+    <script src="assets/libs/owl2/owl.carousel.min.js"></script>
+
+    <!-- Index JS -->
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
